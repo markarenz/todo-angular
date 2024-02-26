@@ -1,0 +1,47 @@
+<button
+  (click)="handleSwitchClick()"
+  [attr.aria-label]="isOn ? 'Showing all' : 'Showing only incomplete'"
+  class="w-16 h-8"
+>
+  <svg
+    viewBox="0 0 200 100"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:svg="http://www.w3.org/2000/svg"
+  >
+    <rect
+      class="{{ isOn ? 'fill-green-700' : 'fill-gray-600' }}"
+      width="200"
+      height="100"
+      x="0"
+      y="0"
+      ry="50"
+    />
+    <circle
+      style="filter: drop-shadow(1px 1px 15px rgb(0 0 0 / 0.4))"
+      class="{{
+        isOn ? 'fill-green-500 stroke-green-900' : 'fill-gray-500 stroke-gray-400'
+      }} transition-all duration-300  shadow-lg"
+      stroke-width="6"
+      [attr.cx]="isOn ? 50 : 150"
+      cy="50"
+      r="48"
+    />
+  </svg>
+  <div class="relative w-full h-6 overflow-x-hidden">
+    <div
+      class="transition-all duration-500 absolute left-0 w-full text-center {{
+        isOn ? 'translate-x-0 opacity-100' : '-translate-x-6 opacity-0'
+      }}"
+    >
+      {{ labelOn }}
+    </div>
+    <div
+      class="transition-all duration-500 absolute left-0 w-full text-center {{
+        !isOn ? 'translate-x-0 opacity-100' : 'translate-x-6 opacity-0'
+      }}"
+    >
+      {{ labelOff }}
+    </div>
+  </div>
+</button>

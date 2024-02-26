@@ -1,0 +1,8 @@
+<div class="mt-6">
+  @for (todo of todoItems; track todo.id) {
+    <app-todo-item [todo]="todo" />
+  }
+  @if (todoItems.length === 0) {
+    <div>You have no to-do items.</div>
+  }
+</div>

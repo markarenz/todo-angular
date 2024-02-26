@@ -25,3 +25,16 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Features
+
+- [x] Basic layout
+  - [x] Header
+  - [x] Display existing TDs
+- [x] Display mode for show all/filter
+- [x] Handle creation
+- [x] Handle "done" clicks
+- [x] Handle deletion
+- [x] Create switch UI for "show all" toggle
+- [x] Save values in local storage
+- [ ] Handle edits of todo labels

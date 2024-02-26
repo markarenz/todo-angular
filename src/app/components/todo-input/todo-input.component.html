@@ -1,0 +1,33 @@
+<div class="flex items-center gap-2 mt-6 px-2">
+  <div class="flex-0">
+    <label for="todo-input" class="flex-0">New Todo</label>
+  </div>
+  <div class="flex-1">
+    <input
+      id="todo-input"
+      type="text"
+      [(ngModel)]="todoItemInputValue"
+      name="todoItemInputValue"
+      class="w-full py-1 px-2 rounded-md"
+      (keydown.enter)="addNewTodoItem()"
+    />
+  </div>
+  <div class="flex-0">
+    <button
+      (click)="addNewTodoItem()"
+      class="border-2 p-1 rounded-full uppercase bg-green-600 border-green-500 ring-0 ring-green-500 hover:bg-green-800 hover:text-gray-100 hover:ring-2 transition-all duration-300 w-6 h-6"
+    >
+      <svg
+        viewBox="0 0 100 100"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:svg="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="#eee"
+          d="M 40.000142,0 V 40.000142 H 0 V 59.999955 H 40.000142 V 100.0001 H 59.999955 V 59.999955 H 100.0001 V 40.000142 H 59.999955 V 0 Z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="mt-2 w-full bg-gray-100 flex gap-4 px-2 pt-2 pb-1 rounded-md">
+  <div class="flex-0">
+    <input type="checkbox" [checked]="todo.isComplete" (click)="handleToggleComplete(todo.id)" />
+  </div>
+  <div class="flex-1">
+    <button
+      type="button"
+      (click)="handleEditTodoModalOpen(todo.id)"
+      class="text-left w-full border-dashed border-b-2 border-transparent hover:border-gray-400"
+    >
+      {{ todo.label }}
+    </button>
+  </div>
+  <div class="flex-0">
+    <button
+      type="button"
+      (click)="handleDeleteItem(todo.id)"
+      class="border-2 p-1 rounded-full uppercase bg-red-600 border-red-400 ring-0 ring-red-400 hover:bg-red-800 hover:text-gray-100 hover:ring-2 transition-all duration-300 w-6 h-6"
+    >
+      <svg
+        viewBox="0 0 100 100"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:svg="http://www.w3.org/2000/svg"
+      >
+        <path fill="#eee" d="M 0,40 H 100 V 60 H 0 Z" />
+      </svg>
+    </button>
+  </div>
+</div>

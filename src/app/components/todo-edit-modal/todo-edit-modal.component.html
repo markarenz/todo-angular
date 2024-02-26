@@ -1,0 +1,47 @@
+<div
+  class="fixed top-0 left-0 w-screen h-screen bg-[rgba(0,0,0,.7)] flex items-center justify-center {{
+    editingTodoId > -1 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+  }} transition-all duration-300"
+>
+  <div
+    class="relative rounded-xl bg-gray-200 shadow-lg border-2 border-green-500 max-w-2xl w-full"
+    cdkTrapFocus
+  >
+    <div class="bg-green-700 text-gray-200 p-6 rounded-t-lg">
+      <h2 class="m-0 p-0 text-2xl">Edit Todo</h2>
+    </div>
+    <div class="p-6">
+      <div>
+        <input
+          id="todo-input"
+          #modalInput
+          type="text"
+          [(ngModel)]="todoEditInputValue"
+          name="todoEditInputValue"
+          class="w-full py-1 px-2 rounded-md"
+          (keydown.enter)="handleModalOk()"
+          [attr.tabindex]="editingTodoId > -1 ? 0 : -1"
+        />
+      </div>
+
+      <div class="flex justify-end gap-2 mt-6">
+        <button
+          type="button"
+          class="p-2 font-bold uppercase rounded-md border-2 border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-gray-100 transition-all duration-300"
+          (click)="handleModalCancel()"
+          [attr.tabindex]="editingTodoId > -1 ? 0 : -1"
+        >
+          Cancel
+        </button>
+        <button
+          type="button"
+          (click)="handleModalOk()"
+          class="bg-green-700 text-gray-100 py-2 px-6 font-bold uppercase rounded-md border-2 border-green-700 hover:bg-green-900 hover:border-green-500 transition-all duration-300"
+          [attr.tabindex]="editingTodoId > -1 ? 0 : -1"
+        >
+          OK
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
