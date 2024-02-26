@@ -8,10 +8,9 @@ describe('CommonSwitchComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CommonSwitchComponent]
-    })
-    .compileComponents();
-    
+      imports: [CommonSwitchComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(CommonSwitchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -19,5 +18,13 @@ describe('CommonSwitchComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should handle click and fire toggle function', () => {
+    spyOn(component.toggleSwitchEvent, 'emit');
+    expect(component).toBeTruthy();
+    fixture.nativeElement.querySelector('.common-switch').dispatchEvent(new Event('click'));
+    fixture.detectChanges();
+    expect(component.toggleSwitchEvent.emit).toHaveBeenCalled();
   });
 });

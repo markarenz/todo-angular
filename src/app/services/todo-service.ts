@@ -98,7 +98,6 @@ export class TodoService {
 
   createTodoItem(newTodoLabel: string) {
     const prevTodoItems = this.todoItems.getValue();
-    console.log('create...', prevTodoItems);
     const newPriority =
       prevTodoItems.length === 0
         ? 1

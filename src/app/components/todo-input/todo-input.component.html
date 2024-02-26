@@ -8,14 +8,14 @@
       type="text"
       [(ngModel)]="todoItemInputValue"
       name="todoItemInputValue"
-      class="w-full py-1 px-2 rounded-md"
+      class="btn-input w-full py-1 px-2 rounded-md"
       (keydown.enter)="addNewTodoItem()"
     />
   </div>
   <div class="flex-0">
     <button
       (click)="addNewTodoItem()"
-      class="border-2 p-1 rounded-full uppercase bg-green-600 border-green-500 ring-0 ring-green-500 hover:bg-green-800 hover:text-gray-100 hover:ring-2 transition-all duration-300 w-6 h-6"
+      class="btn-input-add border-2 p-1 rounded-full uppercase bg-green-600 border-green-500 ring-0 ring-green-500 hover:bg-green-800 hover:text-gray-100 hover:ring-2 transition-all duration-300 w-6 h-6"
     >
       <svg
         viewBox="0 0 100 100"

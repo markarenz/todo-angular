@@ -26,6 +26,7 @@
 
       <div class="flex justify-end gap-2 mt-6">
         <button
+          id="todo-modal-cancel"
           type="button"
           class="p-2 font-bold uppercase rounded-md border-2 border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-gray-100 transition-all duration-300"
           (click)="handleModalCancel()"
@@ -35,6 +36,7 @@
         </button>
         <button
           type="button"
+          id="todo-modal-ok"
           (click)="handleModalOk()"
           class="bg-green-700 text-gray-100 py-2 px-6 font-bold uppercase rounded-md border-2 border-green-700 hover:bg-green-900 hover:border-green-500 transition-all duration-300"
           [attr.tabindex]="editingTodoId > -1 ? 0 : -1"
